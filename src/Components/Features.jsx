@@ -2,11 +2,19 @@ import { IoCarSport } from "react-icons/io5";
 import { GrCertificate } from "react-icons/gr";
 import { FaHandHoldingHeart, FaHandsHelping } from 'react-icons/fa';
 import { MdMiscellaneousServices } from "react-icons/md";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 const Features = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <div className="container mx-auto pt-20 bg-[#F4F3F0]">
-      <h1 className="text-3xl font-bold text-center mb-12">Why Choose Us</h1>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+      <h1 data-aos="fade-down" data-aos-anchor-placement="top-center" className="text-3xl font-bold text-center mb-12">Why Choose Us</h1>
+      <div data-aos="fade-up" data-aos-anchor-placement="top-center" className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
 
         <div className="card  bg-base-100 shadow-xl">
           <figure className="mt-4">

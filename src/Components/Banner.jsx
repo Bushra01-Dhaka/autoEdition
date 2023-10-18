@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 
 const Banner = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <div>
       <div
@@ -12,7 +20,7 @@ const Banner = () => {
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md text-white">
+          <div data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="max-w-md  text-white">
             <h1 className="mb-5 text-5xl font-bold">AutoEdition</h1>
             <hr />
             <p className="my-5 text-lg">
