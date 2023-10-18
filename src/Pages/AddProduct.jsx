@@ -2,7 +2,7 @@ import Navbar from "../Components/Navbar";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { IoNewspaperOutline } from "react-icons/io5";
+import Footer from "../Components/Footer";
 
 const AddProduct = () => {
 
@@ -166,6 +166,8 @@ const AddProduct = () => {
           </form>
         </div>
       </div>
+
+      <Footer></Footer>
     </div>
   );
 };
