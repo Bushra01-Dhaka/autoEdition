@@ -7,12 +7,22 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from './App';
+import AddProduct from './Pages/AddProduct';
+import MyCart from './Pages/MyCart';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
   },
+  {
+    path: "/addProduct",
+    element: <AddProduct></AddProduct>
+  },
+  {
+    path: "/myCart",
+    element:<MyCart></MyCart>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

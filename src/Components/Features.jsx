@@ -6,9 +6,9 @@ const Features = () => {
   return (
     <div className="container mx-auto pt-20 bg-[#F4F3F0]">
       <h1 className="text-3xl font-bold text-center mb-12">Why Choose Us</h1>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card  bg-base-100 shadow-xl">
           <figure className="mt-4">
             <IoCarSport className="text-5xl"></IoCarSport>
           </figure>
@@ -19,7 +19,7 @@ const Features = () => {
         </div>
 
 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card  bg-base-100 shadow-xl">
           <figure className="mt-4">
             <FaHandHoldingHeart className="text-5xl"></FaHandHoldingHeart>
           </figure>
@@ -30,7 +30,7 @@ const Features = () => {
         </div>
 
 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card  bg-base-100 shadow-xl">
           <figure className="mt-4">
             <MdMiscellaneousServices className="text-5xl"></MdMiscellaneousServices>
           </figure>
@@ -41,7 +41,7 @@ const Features = () => {
         </div>
 
 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card  bg-base-100 shadow-xl">
           <figure className="mt-4">
             <FaHandsHelping className="text-5xl"></FaHandsHelping>
           </figure>
@@ -51,7 +51,7 @@ const Features = () => {
           </div>
         </div>
 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card  bg-base-100 shadow-xl">
           <figure className="mt-4">
             <IoCarSport className="text-5xl"></IoCarSport>
           </figure>
@@ -61,7 +61,7 @@ const Features = () => {
           </div>
         </div>
 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card  bg-base-100 shadow-xl">
           <figure className="mt-4">
             <GrCertificate className="text-5xl"></GrCertificate>
           </figure>
