@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Footer from "../Components/Footer";
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
 
@@ -19,8 +20,9 @@ const AddProduct = () => {
         const rating = form.rating.value;
         const description = form.description.value;
         const price = form.price.value;
+        const image = form.image.value;
 
-        const newProductInfo = {name,brand,type,rating,description,price};
+        const newProductInfo = {name,brand,type,rating,description,price,image};
         console.log(newProductInfo);
 
         fetch('http://localhost:5000/products', {
@@ -33,6 +35,14 @@ const AddProduct = () => {
         .then(res => res.json())
         .then(data => {
           console.log(data);
+          if(data.insertedId)
+          {
+            Swal.fire(
+              'Success',
+              'Product Added Successfully!',
+              'success'
+            )
+          }
         })
       }
 
