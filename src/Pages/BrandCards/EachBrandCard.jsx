@@ -40,11 +40,11 @@ const EachBrandCard = ({ card }) => {
               </p>
             </div>
             <div className="flex flex-col gap-2">
-              <Link to="" className="btn bg-slate-200">
+              <Link to='' className="btn bg-slate-200">
                 {" "}
                 <BiSolidEditAlt className="text-black text-xl"></BiSolidEditAlt>
               </Link>
-              <Link to="" className="btn bg-slate-200">
+              <Link to={`/details/${name}`} className="btn bg-slate-200">
                 {" "}
                 <BiSolidBullseye className="text-black text-xl"></BiSolidBullseye>
               </Link>

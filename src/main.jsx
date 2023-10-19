@@ -11,12 +11,15 @@ import SignUp from "./Pages/SignUp";
 import AuthProvider from "./Providers/AuthProvider";
 import PrivateRoutes from "./PrivateRoutes";
 import EachBrandCards from "./Pages/BrandCards/EachBrandCards";
+import Details from "./Pages/Details";
+import Error from "./Pages/Error";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<Error></Error>
   },
   {
     path: "/addProduct",
@@ -39,6 +42,12 @@ const router = createBrowserRouter([
     element:<EachBrandCards></EachBrandCards>,
     loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
   },
+  {
+    path:"/details/:id",
+    element:<Details></Details>,
+    loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+  },
+   
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
