@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import AdvertiseSlider from "../../Components/AdvertiseSlider";
+import Navbar from "../../Components/Navbar";
 
 
 
 const EachBrandCards = () => {
     const brands = useLoaderData();
-    const {brand_name} = brands; 
+   
 
    
     console.log(brands.brand_name);
@@ -25,7 +27,9 @@ const EachBrandCards = () => {
     
     return (
         <div>
-             <h1 className="text-4xl text-center font-bold">Brand Cards Details: {brand_name}</h1>
+             {/* <h1 className="text-4xl text-center font-bold">Brand Cards Details: {brand_name}</h1> */}
+             <Navbar></Navbar>
+             <AdvertiseSlider></AdvertiseSlider>
         </div>
     );
 };
