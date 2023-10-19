@@ -10,6 +10,7 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import AuthProvider from "./Providers/AuthProvider";
 import PrivateRoutes from "./PrivateRoutes";
+import EachBrandCards from "./Pages/BrandCards/EachBrandCards";
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp></SignUp>,
+  },
+  {
+    path:"brandCards/:id",
+    element:<EachBrandCards></EachBrandCards>,
+    loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
   },
 ]);
 
