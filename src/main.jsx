@@ -9,6 +9,7 @@ import MyCart from "./Pages/MyCart";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import AuthProvider from "./Providers/AuthProvider";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 const router = createBrowserRouter([
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/addProduct",
-    element: <AddProduct></AddProduct>,
+    element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>,
   },
   {
     path: "/myCart",

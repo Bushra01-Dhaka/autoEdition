@@ -5,6 +5,7 @@ import BrandCards from './Components/Brand/BrandCards'
 import Features from './Components/Features'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
+import SellCars from './Components/SellCars'
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
       <Navbar></Navbar>
       <Banner></Banner>
       <BrandCards></BrandCards>
+      <SellCars></SellCars>
       <Features></Features>
       <Footer></Footer>
     </>

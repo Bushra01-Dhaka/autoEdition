@@ -12,7 +12,7 @@ const PrivateRoutes = ({children}) => {
     if(loading)
     {
         return <div className="h-screen flex justify-center items-center"><RotatingLines
-        strokeColor="#99627A"
+        strokeColor="black"
         strokeWidth="5"
         animationDuration="0.75"
         width="96"
