@@ -1,14 +1,15 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import App from './App';
-import AddProduct from './Pages/AddProduct';
-import MyCart from './Pages/MyCart';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import AddProduct from "./Pages/AddProduct";
+import MyCart from "./Pages/MyCart";
+import Login from "./Pages/Login";
+import SignUp from "./Pages/SignUp";
+import AuthProvider from "./Providers/AuthProvider";
+
 
 const router = createBrowserRouter([
   {
@@ -17,17 +18,26 @@ const router = createBrowserRouter([
   },
   {
     path: "/addProduct",
-    element: <AddProduct></AddProduct>
+    element: <AddProduct></AddProduct>,
   },
   {
     path: "/myCart",
-    element:<MyCart></MyCart>
+    element: <MyCart></MyCart>,
   },
-  
+  {
+    path: "/login",
+    element: <Login></Login>,
+  },
+  {
+    path: "/signup",
+    element: <SignUp></SignUp>,
+  },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-       <RouterProvider router={router} />
-  </React.StrictMode>,
-)
+   <AuthProvider>
+   <RouterProvider router={router} />
+   </AuthProvider>
+  </React.StrictMode>
+);

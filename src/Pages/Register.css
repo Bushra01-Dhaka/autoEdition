@@ -1,0 +1,20 @@
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: black;
+    font-size: 12px;
+    
+  }
+
+  .swal-button.swal-button--confirm:hover {
+    background-color: gray ;
+  }
+  .swal-text {
+    
+    padding: 17px;
+    display: block;
+    margin: 22px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+  }

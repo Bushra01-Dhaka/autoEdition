@@ -1,7 +1,24 @@
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
+import { useContext } from "react";
 const logoSrc = './cover.png';
 
 const Navbar = () => {
+
+  const {user, logOut} = useContext(AuthContext);
+
+
+  const handleSignOut = () => 
+  {
+        logOut()
+        .then(result => {
+          console.log(result.user);
+        })
+        .catch(error => {
+          console.error(error);
+        })
+  }
+
   return (
     <div className="container mx-auto">
       <div className="navbar bg-base-100">
@@ -71,7 +88,18 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-         <Link><button className="btn btn-sm rounded bg-black text-white hover:bg-slate-800">Login</button></Link>
+         {/* <Link to='/login'><button className="btn btn-sm rounded bg-black text-white hover:bg-slate-800">Login</button></Link> */}
+         {
+            user? <div className="flex flex-col-reverse md:flex-row items-center gap-2">
+              <div className="flex items-center"><img className="w-[40px] h-[40px] rounded-[40px]" src={user.photoURL} alt="" />
+              <p className="text-[12px]">{user.email}</p>
+              </div>
+              <button onClick={handleSignOut} className="w-[100px] h-[40px] bg-black text-white text-bold rounded hover:bg-slate-600">Sign Out</button>
+            </div>
+            : 
+            <Link  to='/login'><button className="w-[100px] h-[40px] bg-black text-white text-bold rounded hover:bg-slate-600">Login</button></Link>
+          }
+           
         </div>
       </div>
     </div>
