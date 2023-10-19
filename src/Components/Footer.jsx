@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <footer className="footer p-10 bg-black text-white mt-20">
         <aside>
-        <Link className="bg-white rounded"><img className="h-[50px] lg:h-[50px] object-cover " src={logoSrc} alt="logo" /></Link>
+        <Link className="bg-white rounded"><img className="h-[50px] lg:h-[50px] object-cover " src="https://i.ibb.co/GcVLT2h/cover.png" alt="logo" /></Link>
         <p>Where Luxury Meets Performance</p>
         </aside>
         <nav>

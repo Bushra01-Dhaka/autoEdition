@@ -66,7 +66,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link><img className="h-[70px] lg:h-[100px] object-cover" src={logoSrc} alt="logo" /></Link>
+          <Link><img className="h-[70px] lg:h-[100px] object-cover" src="https://i.ibb.co/GcVLT2h/cover.png" alt="logo" /></Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
