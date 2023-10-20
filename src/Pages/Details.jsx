@@ -1,9 +1,10 @@
-import { useParams } from "react-router-dom";
-import Navbar from "../Components/Navbar";
+import { Link, useParams } from "react-router-dom";
 import Rating from "react-rating";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Footer from "../Components/Footer";
 import Nav2 from "../Components/Nav2";
+import { AuthContext } from "../Providers/AuthProvider";
+import swal from "sweetalert";
 
 
 
@@ -11,6 +12,10 @@ const Details = () => {
 
   const { id } = useParams();
   console.log(id);
+
+  const {user}  = useContext(AuthContext);
+  const email = user.email;
+  console.log(email);
 
 
   const [allProducts, setAllProducts] = useState([]);
@@ -23,7 +28,44 @@ const Details = () => {
 
   }, [id]);
 
-  console.log("all", allProducts)
+  console.log("all", allProducts);
+
+  const handleAddToCart = (image1,description1,brand1,type1,price1,rating1) => {
+       
+        
+        const image = image1;
+        const description = description1;
+        const brand = brand1;
+        const type = type1;
+        const price = price1;
+        const rating = rating1;
+
+        console.log(image,description,brand,type,price,rating,email);
+
+          const addedCartData = {image,description,brand,type,price,rating,email};
+         console.log(addedCartData);
+
+         fetch(`http://localhost:5000/carts`,{
+          method:'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body:  JSON.stringify(addedCartData)
+       })
+       .then(res => res.json())
+      .then(data => {
+        console.log(data)
+        if(data.insertedId)
+        {
+          swal("Your Favorite Product Added Successfully.", {
+            button: "Ok",
+          })
+        }
+
+      })
+
+       
+  }
 
  
   return (
@@ -41,7 +83,7 @@ const Details = () => {
               <h1 className="text-4xl font-bold">{allProducts.name}</h1>
               <p className="my-2">{allProducts.description}</p>
             </div>
-            <div className="text-xl space-y-4 p-4">
+            <div className="text-xl space-y-4 p-4 text-black">
               <p><span className="font-bold">Brand: </span>{allProducts.brand}</p>
               <p><span className="font-bold">Type: </span>{allProducts.type}</p>
               <p><span className="font-bold">Price: </span>${allProducts.price}</p>
@@ -56,6 +98,16 @@ const Details = () => {
                   }
                 />
             </div>
+            <Link className="py-4"><button onClick={()=> handleAddToCart(allProducts.image,
+            allProducts.description,
+            allProducts.brand,
+            allProducts.type,
+            allProducts.price,
+            allProducts.rating
+            
+            )
+            } 
+            className="btn bg-black font-bold rounded text-white m-4  hover:bg-slate-900">Add to Cart</button></Link>
           </div>
 
         </div>

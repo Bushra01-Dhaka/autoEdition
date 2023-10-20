@@ -3,8 +3,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Footer from "../Components/Footer";
-import Swal from "sweetalert2";
 import Nav2 from "../Components/Nav2";
+import swal from "sweetalert";
 
 const AddProduct = () => {
 
@@ -38,11 +38,9 @@ const AddProduct = () => {
           console.log(data);
           if(data.insertedId)
           {
-            Swal.fire(
-              'Success',
-              'Product Added Successfully!',
-              'success'
-            )
+            swal("Product Added Successfully.", {
+              button: "Ok",
+            })
           }
         })
       }

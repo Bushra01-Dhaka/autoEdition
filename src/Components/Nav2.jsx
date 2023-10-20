@@ -16,7 +16,7 @@ const Nav2 = () => {
   };
   return (
     <div>
-      <div className="container mx-auto py-4 bg-[#F4F3F0]">
+      <div className="container mx-auto py-4 bg-[#F4F3F0] text-black">
         <div className="navbar">
           <div className="navbar-start">
             <div className="dropdown">
@@ -101,7 +101,7 @@ const Nav2 = () => {
                     isPending
                       ? "pending"
                       : isActive
-                      ? " font-bold underline bg-transparent "
+                      ? "text-black font-bold underline bg-transparent "
                       : ""
                   }
                 >
