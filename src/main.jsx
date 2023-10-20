@@ -13,6 +13,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import EachBrandCards from "./Pages/BrandCards/EachBrandCards";
 import Details from "./Pages/Details";
 import Error from "./Pages/Error";
+import Update from "./Pages/Update";
 
 
 
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
     element:<PrivateRoutes><Details></Details></PrivateRoutes>,
     loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
   },
+  {
+    path:"/update/:id",
+    element: <PrivateRoutes><Update></Update></PrivateRoutes>,
+    loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+  }
   
    
 ]);

@@ -40,7 +40,7 @@ const EachBrandCard = ({ card }) => {
               </p>
             </div>
             <div className="flex flex-col gap-2">
-              <Link to='' className="btn bg-slate-200">
+              <Link to={`/update/${_id}`} className="btn bg-slate-200">
                 {" "}
                 <BiSolidEditAlt className="text-black text-xl"></BiSolidEditAlt>
               </Link>
