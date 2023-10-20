@@ -1,10 +1,10 @@
 import { useLoaderData } from "react-router-dom";
-import Navbar from "../Components/Navbar";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Footer from "../Components/Footer";
 import Swal from "sweetalert2";
+import Nav2 from "../Components/Nav2";
 
 const Update = () => {
   const products = useLoaderData();
@@ -63,8 +63,8 @@ const Update = () => {
 
 
   return (
-    <div>
-      <Navbar></Navbar>
+    <div className="bg-[#F4F3F0]">
+      <Nav2></Nav2>
       <div>
         <div className="container mx-auto bg-[#F4F3F0] pt-8">
           <div data-aos="fade-down" data-aos-anchor-placement="top-center">

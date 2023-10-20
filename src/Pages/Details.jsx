@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import Rating from "react-rating";
 import { useEffect, useState } from "react";
 import Footer from "../Components/Footer";
+import Nav2 from "../Components/Nav2";
 
 
 
@@ -26,10 +27,10 @@ const Details = () => {
 
  
   return (
-    <div>
-      <Navbar></Navbar>
+    <div className="bg-[#F4F3F0]">
+      <Nav2></Nav2>
 
-      <div className="container mx-auto">
+      <div className="container mx-auto my-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-4">
           <div className="border-2">
             <img src={allProducts.image} alt="" />

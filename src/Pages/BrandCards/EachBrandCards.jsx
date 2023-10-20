@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import AdvertiseSlider from "../../Components/AdvertiseSlider";
-import Navbar from "../../Components/Navbar";
 import EachBrandCard from "./EachBrandCard";
 import Footer from "../../Components/Footer";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Nav2 from "../../Components/Nav2";
 
 const EachBrandCards = () => {
   const brands = useLoaderData();
@@ -37,8 +37,8 @@ const EachBrandCards = () => {
 
 
   return (
-    <div>
-      <Navbar></Navbar>
+    <div className="bg-[#F4F3F0]">
+      <Nav2></Nav2>
       <AdvertiseSlider></AdvertiseSlider>
       <div className="container mx-auto my-24">
         <div data-aos="fade-down" data-aos-anchor-placement="top-center" className="max-w-lg mx-auto mb-28">

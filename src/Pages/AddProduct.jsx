@@ -1,9 +1,10 @@
-import Navbar from "../Components/Navbar";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Footer from "../Components/Footer";
 import Swal from "sweetalert2";
+import Nav2 from "../Components/Nav2";
 
 const AddProduct = () => {
 
@@ -48,7 +49,8 @@ const AddProduct = () => {
 
   return (
     <div>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
+      <Nav2></Nav2>
       <div className="container mx-auto bg-[#F4F3F0] pt-8">
         <div data-aos="fade-down" data-aos-anchor-placement="top-center" >
           <h1 className="text-center text-4xl font-bold text-black">Add Product</h1>
