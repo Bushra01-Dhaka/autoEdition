@@ -30,7 +30,7 @@ const Details = () => {
 
   console.log("all", allProducts);
 
-  const handleAddToCart = (image1,description1,brand1,type1,price1,rating1) => {
+  const handleAddToCart = (image1,description1,brand1,type1,price1,rating1,name1) => {
        
         
         const image = image1;
@@ -39,10 +39,11 @@ const Details = () => {
         const type = type1;
         const price = price1;
         const rating = rating1;
+        const name = name1;
 
-        console.log(image,description,brand,type,price,rating,email);
+        console.log(image,description,brand,type,price,rating,email,name);
 
-          const addedCartData = {image,description,brand,type,price,rating,email};
+          const addedCartData = {name,image,description,brand,type,price,rating,email};
          console.log(addedCartData);
 
          fetch(`http://localhost:5000/carts`,{
@@ -103,7 +104,8 @@ const Details = () => {
             allProducts.brand,
             allProducts.type,
             allProducts.price,
-            allProducts.rating
+            allProducts.rating,
+            allProducts.name
             
             )
             } 

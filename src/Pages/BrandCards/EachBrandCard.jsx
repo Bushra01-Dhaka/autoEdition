@@ -19,7 +19,7 @@ const EachBrandCard = ({ card }) => {
 
           <div className="flex justify-between items-center lg:gap-0 gap-4  lg:col-span-3 px-4 my-2 mx-auto lg:m-0">
             <div className="text-justify ">
-              <h2 className="font-bold text-2xl">{name}</h2>
+              <h2 className="font-bold text-2xl text-black ">{name}</h2> 
               <div className="my-4 text-slate-600 font-medium">
                 <p>{brand}</p>
                 <p>{type}</p>
