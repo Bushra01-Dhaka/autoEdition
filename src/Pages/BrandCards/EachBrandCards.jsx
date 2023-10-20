@@ -41,7 +41,10 @@ const EachBrandCards = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-4 lg:mx-0">
           {selectedBrand.map((card, index) => (
-            <EachBrandCard card={card} key={index}></EachBrandCard>
+            <EachBrandCard 
+            card={card} 
+            key={index}>
+            </EachBrandCard>
           ))}
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const EachBrandCard = ({ card }) => {
-  const { name, brand, type, rating, image, price } = card;
+  const {_id, name, brand, type, rating, image, price } = card;
   return (
     <div className="container mx-auto bg-[#F4F3F0]">
       <div className=" lg:h-[300px]   bg-base-100 shadow-xl rounded">
@@ -44,7 +44,7 @@ const EachBrandCard = ({ card }) => {
                 {" "}
                 <BiSolidEditAlt className="text-black text-xl"></BiSolidEditAlt>
               </Link>
-              <Link to={`/details/${name}`} className="btn bg-slate-200">
+              <Link to={`/details/${brand}`} className="btn bg-slate-200">
                 {" "}
                 <BiSolidBullseye className="text-black text-xl"></BiSolidBullseye>
               </Link>
