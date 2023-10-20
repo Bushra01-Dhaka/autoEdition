@@ -15,6 +15,7 @@ import Details from "./Pages/Details";
 import Error from "./Pages/Error";
 
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,15 +39,16 @@ const router = createBrowserRouter([
     element: <SignUp></SignUp>,
   },
   {
-    path:"brandCards/:id",
+    path:"/brandCards/:id",
     element:<EachBrandCards></EachBrandCards>,
     loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
   },
   {
     path:"/details/:id",
-    element:<Details></Details>,
+    element:<PrivateRoutes><Details></Details></PrivateRoutes>,
     loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
   },
+  
    
 ]);
 

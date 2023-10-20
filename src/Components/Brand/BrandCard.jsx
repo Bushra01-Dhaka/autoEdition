@@ -9,10 +9,10 @@ const BrandCard = ({ brand }) => {
     Aos.init();
   }, []);
 
-  const { brand_name, brand_logo,_id } = brand;
+  const { brand_name, brand_logo } = brand;
   return (
     <div>
-      <Link to={`brandCards/${_id}`}>
+      <Link to={`/brandCards/${brand_name}`}>
         <div
           data-aos="fade-up"
           data-aos-anchor-placement="top-center"

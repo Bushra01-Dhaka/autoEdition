@@ -44,7 +44,7 @@ const EachBrandCard = ({ card }) => {
                 {" "}
                 <BiSolidEditAlt className="text-black text-xl"></BiSolidEditAlt>
               </Link>
-              <Link to={`/details/${brand}`} className="btn bg-slate-200">
+              <Link to={`/details/${_id}`} className="btn bg-slate-200">
                 {" "}
                 <BiSolidBullseye className="text-black text-xl"></BiSolidBullseye>
               </Link>

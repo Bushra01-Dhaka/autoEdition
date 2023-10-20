@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { useContext } from "react";
-const logoSrc = './cover.png';
 
 const Navbar = () => {
 
