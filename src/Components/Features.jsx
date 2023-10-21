@@ -12,11 +12,11 @@ const Features = () => {
   }, []);
 
   return (
-    <div className="container mx-auto pt-20 ">
+    <div className="container mx-auto py-20 ">
       <h1 data-aos="fade-down" data-aos-anchor-placement="top-center" className="text-3xl  font-bold text-center my-10 pb-20">Why Choose Us</h1>
       <div data-aos="fade-right" data-aos-anchor-placement="top-center" className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 text-black">
 
-        <div className="card  bg-base-100 shadow-xl">
+        <div className="card rounded bg-base-100 shadow-xl">
           <figure className="mt-4">
             <IoCarSport className="text-5xl"></IoCarSport>
           </figure>
@@ -27,7 +27,7 @@ const Features = () => {
         </div>
 
 
-        <div className="card  bg-base-100 shadow-xl">
+        <div className="card rounded  bg-base-100 shadow-xl">
           <figure className="mt-4">
             <FaHandHoldingHeart className="text-5xl"></FaHandHoldingHeart>
           </figure>
@@ -38,7 +38,7 @@ const Features = () => {
         </div>
 
 
-        <div className="card  bg-base-100 shadow-xl">
+        <div className="card rounded bg-base-100 shadow-xl">
           <figure className="mt-4">
             <MdMiscellaneousServices className="text-5xl"></MdMiscellaneousServices>
           </figure>
@@ -49,7 +49,7 @@ const Features = () => {
         </div>
 
 
-        <div className="card  bg-base-100 shadow-xl">
+        <div className="card rounded bg-base-100 shadow-xl">
           <figure className="mt-4">
             <FaHandsHelping className="text-5xl"></FaHandsHelping>
           </figure>
@@ -59,7 +59,7 @@ const Features = () => {
           </div>
         </div>
 
-        <div className="card  bg-base-100 shadow-xl">
+        <div className="card rounded  bg-base-100 shadow-xl">
           <figure className="mt-4">
             <IoCarSport className="text-5xl"></IoCarSport>
           </figure>
@@ -69,7 +69,7 @@ const Features = () => {
           </div>
         </div>
 
-        <div className="card  bg-base-100 shadow-xl">
+        <div className="card rounded  bg-base-100 shadow-xl">
           <figure className="mt-4">
             <GrCertificate className="text-5xl"></GrCertificate>
           </figure>

@@ -47,9 +47,9 @@ const AddProduct = () => {
 
   return (
     <div>
-      {/* <Navbar></Navbar> */}
+    
       <Nav2></Nav2>
-      <div className="container mx-auto bg-[#F4F3F0] pt-8">
+      <div className="container mx-auto bg-[#F4F3F0] py-8">
         <div data-aos="fade-down" data-aos-anchor-placement="top-center" >
           <h1 className="text-center text-4xl font-bold text-black">Add Product</h1>
         </div>

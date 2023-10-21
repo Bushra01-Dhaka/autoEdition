@@ -164,7 +164,7 @@ const Login = () => {
         </div>
       </div>
 
-      {/* trial end */}
+     
     </div>
   );
 };

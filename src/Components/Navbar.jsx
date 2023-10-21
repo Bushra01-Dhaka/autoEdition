@@ -102,7 +102,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? " font-bold underline bg-transparent "
+                    ? " font-bold underline bg-transparent hover:bg-white "
                     : ""
                 }
               >
@@ -116,7 +116,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? " text-black font-bold underline bg-transparent "
+                    ? "text-black font-bold underline bg-transparent hover:bg-white "
                     : ""
                 }
               >
@@ -130,7 +130,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                   isPending
                     ? "pending"
                     : isActive
-                    ? " text-black font-bold underline bg-transparent "
+                    ? " text-black font-bold underline bg-transparent hover:bg-white "
                     : ""
                 }
               >

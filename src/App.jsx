@@ -33,8 +33,8 @@ function App() {
       <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode}></Navbar>
       <Banner></Banner>
       <BrandCards></BrandCards>
-      <SellCars></SellCars>
       <Features></Features>
+      <SellCars></SellCars>
       <Footer></Footer>
     </>
   )
