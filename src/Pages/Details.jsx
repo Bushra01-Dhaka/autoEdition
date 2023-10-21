@@ -20,7 +20,7 @@ const Details = () => {
 
   const [allProducts, setAllProducts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://brand-shop-server-jbppt2hrj-bushras-projects-96f4a913.vercel.app/products/${id}`)
     .then(res => res.json())
     .then(data => {
       setAllProducts(data);
@@ -46,7 +46,7 @@ const Details = () => {
           const addedCartData = {name,image,description,brand,type,price,rating,email};
          console.log(addedCartData);
 
-         fetch(`http://localhost:5000/carts`,{
+         fetch(`https://brand-shop-server-jbppt2hrj-bushras-projects-96f4a913.vercel.app/carts`,{
           method:'POST',
           headers: {
             'content-type': 'application/json',

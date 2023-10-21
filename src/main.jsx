@@ -30,7 +30,7 @@ const router = createBrowserRouter([
   {
     path: "/myCart",
     element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-    loader: () => fetch(`http://localhost:5000/carts`)
+    loader: () => fetch(`https://brand-shop-server-jbppt2hrj-bushras-projects-96f4a913.vercel.app/carts`)
   },
   {
     path: "/login",
@@ -43,17 +43,17 @@ const router = createBrowserRouter([
   {
     path:"/brandCards/:id",
     element:<EachBrandCards></EachBrandCards>,
-    loader: ({params}) => fetch(`http://localhost:5000/brands/${params.id}`)
+    loader: ({params}) => fetch(`https://brand-shop-server-jbppt2hrj-bushras-projects-96f4a913.vercel.app/brands/${params.id}`)
   },
   {
     path:"/details/:id",
     element:<PrivateRoutes><Details></Details></PrivateRoutes>,
-    loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+    loader: ({params}) => fetch(`https://brand-shop-server-jbppt2hrj-bushras-projects-96f4a913.vercel.app/products/${params.id}`)
   },
   {
     path:"/update/:id",
     element: <PrivateRoutes><Update></Update></PrivateRoutes>,
-    loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+    loader:({params}) => fetch(`https://brand-shop-server-jbppt2hrj-bushras-projects-96f4a913.vercel.app/products/${params.id}`)
   }
   
    

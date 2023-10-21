@@ -22,7 +22,7 @@ const EachBrandCards = () => {
 
   const [loadedSelectedBrand, setLoadedSelectedBrand] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/products`)
+    fetch(`https://brand-shop-server-jbppt2hrj-bushras-projects-96f4a913.vercel.app/products`)
       .then((res) => res.json())
       .then((data) => {
         setLoadedSelectedBrand(data);
