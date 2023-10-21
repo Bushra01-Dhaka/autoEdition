@@ -33,7 +33,7 @@ const MyCart = () => {
         <>
          <div className="h-[60vh] container mx-auto flex items-center justify-center">
             <div>
-                <h1 className="text-4xl font-bold text-black">You {`didn't`} add any product.</h1>
+                <h1 className="text-4xl text-center font-bold text-black">You {`didn't`} add any product.</h1>
             </div>
          </div>
         </>
