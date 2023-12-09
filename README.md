@@ -1,4 +1,4 @@
-## "AutoEdition" - Interactive React Website. :star:
+## "AutoEdition"  :star:
 
 ## Live Link :ghost:
 <https://auto-edition.web.app/>
