@@ -7,6 +7,7 @@ import Features from './Components/Features'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import SellCars from './Components/SellCars'
+import Subscribe from './Components/Subscribe/Subscribe'
 
 function App() {
   
@@ -34,6 +35,7 @@ function App() {
       <Banner></Banner>
       <BrandCards></BrandCards>
       <Features></Features>
+      <Subscribe></Subscribe>
       <SellCars></SellCars>
       <Footer></Footer>
     </>
